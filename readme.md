@@ -20,3 +20,14 @@ npm run deploy => Desplegar en aws lambda
             
 ### Sonarqube       
 ![Image text](https://github.com/richardq26/expertise-talleres/blob/master/sonar.png)
+
+### Comandos git
+Se utilizó git cherry-pick para solo pasar 2 commits de la rama develop a la rama master(producción)           
+Sean los commits de develop:      
+9aeac95     
+830e210        
+9e136fb          
+Se realizan los comandos:             
+git checkout master
+git cherry-pick 9aeac95
+git cherry-pick 9e136fb
