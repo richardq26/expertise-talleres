@@ -1,0 +1,29 @@
+service: expertise-rimac
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-2
+  apiGateway:
+    shouldStartNameWithService: true
+  environment: ${file(env.${self:provider.stage}.json)}
+  timeout: 30
+
+custom:
+  configpath: ./config
+
+package:
+  individually: true
+  patterns:
+    - "!.serverless/**"
+    - "!.git/**"
+    - "!*.md"
+    - "!env.*.json"
+
+functions: ${file(${self:custom.configpath}/serverless/functions.yml)}
+
+plugins:
+  - serverless-offline

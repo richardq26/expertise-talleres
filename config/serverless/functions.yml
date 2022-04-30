@@ -1,0 +1,40 @@
+getDeduciblesText:
+  handler: src/Deducible/controller.getDeduciblesText
+  events:
+    - http:
+        method: get
+        path: /deducibles/getText
+        cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
+        response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
+getDeduciblesByText:
+  handler: src/Deducible/controller.getDeduciblesByText
+  events:
+    - http:
+        method: post
+        path: /deducibles/byText
+        cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
+        # response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
+getDistritos:
+  handler: src/Distrito/controller.getDistritos
+  events:
+    - http:
+        method: get
+        path: /distritos/
+        cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
+        response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
+buscarTaller:
+  handler: src/Taller/controller.buscarTaller
+  events:
+    - http:
+        method: get
+        path: /taller/buscar
+        cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
+        response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
+masCercanos:
+  handler: src/Taller/controller.masCercanos
+  events:
+    - http:
+        method: post
+        path: /taller/masCercanos
+        cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
+        response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
