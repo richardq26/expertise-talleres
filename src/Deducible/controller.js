@@ -9,6 +9,7 @@ exports.getDeduciblesText = async (req, res) => {
 };
 
 exports.getDeduciblesByText = async (event, context, callback) => {
+  // Detalle: El validateBody utiliza joi para validar el schema según el body que se envíe
   event.body = JSON.parse(event.body);
   let { error } =
     validateBody(event.body, getDeduciblesByTextDTO);
