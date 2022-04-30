@@ -28,6 +28,6 @@ Sean los commits de develop:
 830e210        
 9e136fb          
 Se realizan los comandos:             
-git checkout master
-git cherry-pick 9aeac95
-git cherry-pick 9e136fb
+git checkout master       
+git cherry-pick 9aeac95     
+git cherry-pick 9e136fb      
