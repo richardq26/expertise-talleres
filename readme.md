@@ -13,10 +13,10 @@ npm run test => Iniciar pruebas unitarias de servicios con jest
 npm run deploy => Desplegar en aws lambda         
 
 ### Arquitectura
-![Image text](https://github.com/richardq26/expertise-talleres/blob/master/DiagramaBD.png)       
+![Image text](https://github.com/richardq26/expertise-talleres/blob/master/arquitectura.jpeg)   
                                        
 ### Diagrama de base de datos   
-![Image text](https://github.com/richardq26/expertise-talleres/blob/master/arquitectura.jpeg)
+![Image text](https://github.com/richardq26/expertise-talleres/blob/master/DiagramaBD.png)  
             
 ### Sonarqube       
 ![Image text](https://github.com/richardq26/expertise-talleres/blob/master/sonar.png)
@@ -25,7 +25,7 @@ npm run deploy => Desplegar en aws lambda
 Se utilizó git cherry-pick para solo pasar 2 commits de la rama develop a la rama master(producción)           
 Sean los commits de develop:      
 9aeac95     
-830e210        
+830e210      
 9e136fb          
 Se realizan los comandos:             
 git checkout master       
