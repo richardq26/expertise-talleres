@@ -1,7 +1,7 @@
 # Expertise búsqueda de talleres
 
 ### Documentación de api:
-[URL ENDPOITNS](https://documenter.getpostman.com/view/14224194/UVe9RV2f)
+[URL ENDPOITNS](https://documenter.getpostman.com/view/14224194/UyrGBZh9)
 ## Uso:
 Para el uso de la api se requiere acceder a la URL en el punto "Documentación de api"                 
 
