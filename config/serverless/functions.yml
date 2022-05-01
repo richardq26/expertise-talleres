@@ -1,5 +1,7 @@
 getDeduciblesText:
   handler: src/Deducible/controller.getDeduciblesText
+  layers:
+      - { Ref: NodLayerLambdaLayer }
   events:
     - http:
         method: get
@@ -8,6 +10,8 @@ getDeduciblesText:
         response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
 getDeduciblesByText:
   handler: src/Deducible/controller.getDeduciblesByText
+  layers:
+      - { Ref: NodLayerLambdaLayer }
   events:
     - http:
         method: post
@@ -16,6 +20,8 @@ getDeduciblesByText:
         # response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
 getDistritos:
   handler: src/Distrito/controller.getDistritos
+  layers:
+      - { Ref: NodLayerLambdaLayer }
   events:
     - http:
         method: get
@@ -24,17 +30,12 @@ getDistritos:
         response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
 buscarTaller:
   handler: src/Taller/controller.buscarTaller
+  layers:
+      - { Ref: NodLayerLambdaLayer }
   events:
     - http:
         method: get
         path: /taller/buscar
         cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
         response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
-masCercanos:
-  handler: src/Taller/controller.masCercanos
-  events:
-    - http:
-        method: post
-        path: /taller/masCercanos
-        cors: ${file(${self:custom.configpath}/serverless/http-cors.yml)}
-        response: ${file(${self:custom.configpath}/serverless/http-response.yml)}
+

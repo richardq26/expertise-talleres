@@ -22,6 +22,16 @@ package:
     - "!.git/**"
     - "!*.md"
     - "!env.*.json"
+    - '!node_modules/**'
+    - '!package-lock.json'
+layers:
+  NodLayer:
+    name: ${self:service}-${self:provider.stage}-dependencies
+    path: layers
+    description: "Node modules del expertise-talleres rimac"
+    package:
+      exclude:
+        - "!nodejs/node_modules/**"
 
 functions: ${file(${self:custom.configpath}/serverless/functions.yml)}
 
